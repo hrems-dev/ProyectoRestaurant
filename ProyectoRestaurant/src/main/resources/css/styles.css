@@ -1,0 +1,155 @@
+/* Estilos generales */
+.root {
+    -fx-font-family: "Segoe UI", "System";
+    -fx-font-size: 14px;
+    -fx-background-color: #f8f9fa;
+}
+
+/* Estilos de botones */
+.button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.button-success {
+    -fx-background-color: #28a745;
+}
+
+.button-success:hover {
+    -fx-background-color: #218838;
+}
+
+.button-danger {
+    -fx-background-color: #dc3545;
+}
+
+.button-danger:hover {
+    -fx-background-color: #c82333;
+}
+
+/* Estilos de campos de texto */
+.text-field, .text-area {
+    -fx-padding: 8px;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 4px;
+    -fx-background-color: white;
+    -fx-background-radius: 4px;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #80bdff;
+    -fx-effect: dropshadow(gaussian, rgba(0,123,255,0.25), 0, 0, 0, 0);
+}
+
+/* Estilos de tablas */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 4px;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-padding: 10px;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+}
+
+/* Estilos de menú */
+.menu-bar {
+    -fx-background-color: #343a40;
+    -fx-padding: 0 10px;
+}
+
+.menu-bar .menu {
+    -fx-padding: 5px 10px;
+}
+
+.menu-bar .menu-item {
+    -fx-padding: 8px 20px;
+}
+
+.menu-bar .label {
+    -fx-text-fill: white;
+}
+
+.menu-item:hover {
+    -fx-background-color: #007bff;
+}
+
+.menu-item:hover .label {
+    -fx-text-fill: white;
+}
+
+/* Estilos de contenedores */
+.card {
+    -fx-background-color: white;
+    -fx-padding: 20px;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 3);
+}
+
+.header {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-padding: 20px 0;
+}
+
+/* Estilos para formularios */
+.form-group {
+    -fx-spacing: 10px;
+    -fx-padding: 10px 0;
+}
+
+.form-label {
+    -fx-font-weight: bold;
+}
+
+/* Estilos para alertas y mensajes */
+.alert {
+    -fx-padding: 15px;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+}
+
+.alert-success {
+    -fx-background-color: #d4edda;
+    -fx-border-color: #c3e6cb;
+    -fx-text-fill: #155724;
+}
+
+.alert-error {
+    -fx-background-color: #f8d7da;
+    -fx-border-color: #f5c6cb;
+    -fx-text-fill: #721c24;
+}
+
+/* Estilos para elementos de navegación */
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #6c757d;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-text-fill: #007bff;
+    -fx-background-color: #f8f9fa;
+}
+
+.nav-button.active {
+    -fx-text-fill: #007bff;
+    -fx-border-color: #007bff;
+    -fx-border-width: 0 0 2 0;
+}

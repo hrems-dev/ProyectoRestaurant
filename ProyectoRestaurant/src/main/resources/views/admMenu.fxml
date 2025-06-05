@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -9,40 +10,106 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="496.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="root" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TabPane layoutY="41.0" prefHeight="466.0" prefWidth="496.0" side="LEFT" style="-fx-border-color: black;" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab text="platos">
-               <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <Button layoutX="385.0" layoutY="29.0" mnemonicParsing="false" text="Agregar" AnchorPane.rightAnchor="20.0" />
-                        <TextField layoutX="23.0" layoutY="30.0" prefHeight="26.0" prefWidth="174.0" promptText="nombre del plato" AnchorPane.leftAnchor="20.0" />
-                        <TextField layoutX="205.0" layoutY="29.0" prefHeight="26.0" prefWidth="94.0" promptText="presio" />
-                        <TextField layoutX="307.0" layoutY="29.0" prefHeight="26.0" prefWidth="70.0" promptText="stock" />
-                        <TableView layoutX="33.0" layoutY="101.0" prefHeight="346.0" prefWidth="426.0" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
-                          </columns>
-                        </TableView>
-                        <Button layoutX="336.0" layoutY="432.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="103.0" text="Limpiar" />
-                     </children>
-                  </AnchorPane>
-               </content></Tab>
-          <Tab text="bebidas" />
-          <Tab text="sopa" />
-          <Tab text="postre" />
-        </tabs>
-      </TabPane>
-      <Label layoutX="14.0" layoutY="14.0" text="MENU DEL DIA" />
-      <Button layoutX="273.0" layoutY="520.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="103.0" text="Guardar" />
-      <ComboBox layoutX="103.0" layoutY="9.0" prefHeight="26.0" prefWidth="114.0" />
-      <TextField layoutX="111.0" layoutY="521.0" />
-      <Label layoutX="17.0" layoutY="525.0" text="nueva seccion" />
-      <Button layoutX="438.0" layoutY="10.0" mnemonicParsing="false" text="close" />
-      <Button layoutX="227.0" layoutY="9.0" mnemonicParsing="false" text="Modificar" />
+      <VBox spacing="10" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <!-- Header Section -->
+         <HBox alignment="CENTER_LEFT" spacing="15" styleClass="card">
+            <padding>
+               <Insets bottom="10" left="20" right="20" top="10" />
+            </padding>
+            <children>
+               <Label styleClass="header" text="MENÚ DEL DÍA" />
+               <ComboBox prefHeight="30.0" prefWidth="150.0" promptText="Seleccionar sección" />
+               <Button mnemonicParsing="false" styleClass="button" text="Modificar" />
+               <Button mnemonicParsing="false" styleClass="button-danger" text="Cerrar" />
+            </children>
+         </HBox>
+
+         <!-- Tab Section -->
+         <TabPane prefHeight="450.0" side="LEFT" styleClass="card" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+            <tabs>
+               <Tab text="Platos">
+                  <content>
+                     <VBox spacing="15">
+                        <padding>
+                           <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+                        <children>
+                           <!-- Input Form -->
+                           <HBox spacing="10" styleClass="form-group">
+                              <children>
+                                 <TextField prefWidth="250.0" promptText="Nombre del plato" />
+                                 <TextField prefWidth="120.0" promptText="Precio" />
+                                 <TextField prefWidth="100.0" promptText="Stock" />
+                                 <Button mnemonicParsing="false" styleClass="button-success" text="Agregar" />
+                              </children>
+                           </HBox>
+
+                           <!-- Table -->
+                           <TableView VBox.vgrow="ALWAYS">
+                              <columns>
+                                 <TableColumn prefWidth="300.0" text="Nombre del Plato" />
+                                 <TableColumn prefWidth="150.0" text="Precio" />
+                                 <TableColumn prefWidth="100.0" text="Stock" />
+                                 <TableColumn prefWidth="100.0" text="Acciones" />
+                              </columns>
+                           </TableView>
+
+                           <!-- Action Buttons -->
+                           <HBox alignment="CENTER_RIGHT" spacing="10">
+                              <children>
+                                 <Button mnemonicParsing="false" styleClass="button" text="Limpiar" />
+                              </children>
+                           </HBox>
+                        </children>
+                     </VBox>
+                  </content>
+               </Tab>
+               <Tab text="Bebidas">
+                  <content>
+                     <VBox spacing="15">
+                        <padding>
+                           <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+                     </VBox>
+                  </content>
+               </Tab>
+               <Tab text="Sopas">
+                  <content>
+                     <VBox spacing="15">
+                        <padding>
+                           <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+                     </VBox>
+                  </content>
+               </Tab>
+               <Tab text="Postres">
+                  <content>
+                     <VBox spacing="15">
+                        <padding>
+                           <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+                     </VBox>
+                  </content>
+               </Tab>
+            </tabs>
+         </TabPane>
+
+         <!-- Footer Section -->
+         <HBox alignment="CENTER_LEFT" spacing="15" styleClass="card">
+            <padding>
+               <Insets bottom="10" left="20" right="20" top="10" />
+            </padding>
+            <children>
+               <Label styleClass="form-label" text="Nueva sección:" />
+               <TextField prefWidth="200.0" promptText="Nombre de la sección" />
+               <Button mnemonicParsing="false" styleClass="button-success" text="Guardar" />
+            </children>
+         </HBox>
+      </VBox>
    </children>
 </AnchorPane>
