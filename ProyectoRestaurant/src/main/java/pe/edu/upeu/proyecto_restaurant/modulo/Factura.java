@@ -12,34 +12,36 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "pedido")
-public class Pedido {
+@Table(name = "factura")
+public class Factura {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_pedido")
-    private Long idPedido;
+    @Column(name = "id_factura")
+    private Long idFactura;
 
-    @ManyToOne
-    @JoinColumn(name = "id_mesa", referencedColumnName = "id_mesa")
-    private Mesa mesa;
+    @Column(name = "codigo", length = 20, unique = true)
+    private String codigo;
+
+    @Column(name = "fecha_emision")
+    private LocalDateTime fechaEmision;
 
     @ManyToOne
     @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")
     private Cliente cliente;
 
-    @ManyToOne
-    @JoinColumn(name = "id_empleado", referencedColumnName = "id_empleado")
-    private Empleado empleado;
+    @OneToOne
+    @JoinColumn(name = "id_pedido", referencedColumnName = "id_pedido")
+    private Pedido pedido;
 
-    @Column(name = "fecha_hora")
-    private LocalDateTime fechaHora;
+    @Column(name = "subtotal")
+    private Double subtotal;
 
-    @Column(name = "cant_pedidos")
-    private Integer cantPedidos;
+    @Column(name = "igv")
+    private Double igv;
 
     @Column(name = "total")
     private Double total;
 
     @Column(name = "estado", length = 20)
     private String estado;
-}
+} 

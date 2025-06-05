@@ -48,4 +48,9 @@ DetallesPedido
     subtotal
     total
 
+Factura
+    idFactura
+    codigo
+    estado
+
     
