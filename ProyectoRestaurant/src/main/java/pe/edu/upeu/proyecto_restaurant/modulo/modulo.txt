@@ -1,1 +1,51 @@
 modulo 
+base de datos restauranta
+
+generar aqui tablas de base de datos de un restaurante 
+Cliente
+    idCliente
+    nombre
+    Dni
+    cantVisitas
+    estado
+
+Mesa
+    detalle
+    estado (Ocupado,descupado,no habilitado,limpieza)
+
+Producto 
+    idProducto
+    Idcategoria
+    nombre
+    Descripcion
+    Stock
+    Presio
+    estado (Disponibilidad)
+    idSeccion
+
+Seccion
+    idSeccion
+    detalle
+    estado
+
+pedido
+    idPedido
+    idMesa
+    idCliente
+    CantPedidos
+    idDetalles
+    estado
+
+Menu(carrito)
+    idPedido (un solo pedido)
+    idProducto(producto diferente)
+    codPedido
+
+DetallesPedido
+    idDetallesPedidos
+    idFactura
+    igv
+    subtotal
+    total
+
+    
