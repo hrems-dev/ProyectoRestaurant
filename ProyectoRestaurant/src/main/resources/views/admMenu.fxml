@@ -65,7 +65,12 @@
                                        <TextField prefWidth="100.0" promptText="Cantidad" />
                                     </children>
                                  </VBox>
-                                 <Button mnemonicParsing="false" styleClass="button-success" text="Agregar" />
+                                 <VBox spacing="5" alignment="BOTTOM_CENTER">
+                                    <children>
+                                       <Label styleClass="form-label" text=" " />
+                                       <Button mnemonicParsing="false" styleClass="button-success" text="Agregar" />
+                                    </children>
+                                 </VBox>
                               </children>
                            </HBox>
 
@@ -117,7 +122,12 @@
                                        <TextField prefWidth="100.0" promptText="Cantidad" />
                                     </children>
                                  </VBox>
-                                 <Button mnemonicParsing="false" styleClass="button-success" text="Agregar" />
+                                 <VBox spacing="5" alignment="BOTTOM_CENTER">
+                                    <children>
+                                       <Label styleClass="form-label" text=" " />
+                                       <Button mnemonicParsing="false" styleClass="button-success" text="Agregar" />
+                                    </children>
+                                 </VBox>
                               </children>
                            </HBox>
 
@@ -169,7 +179,12 @@
                                        <TextField prefWidth="100.0" promptText="Cantidad" />
                                     </children>
                                  </VBox>
-                                 <Button mnemonicParsing="false" styleClass="button-success" text="Agregar" />
+                                 <VBox spacing="5" alignment="BOTTOM_CENTER">
+                                    <children>
+                                       <Label styleClass="form-label" text=" " />
+                                       <Button mnemonicParsing="false" styleClass="button-success" text="Agregar" />
+                                    </children>
+                                 </VBox>
                               </children>
                            </HBox>
 
@@ -221,7 +236,12 @@
                                        <TextField prefWidth="100.0" promptText="Cantidad" />
                                     </children>
                                  </VBox>
-                                 <Button mnemonicParsing="false" styleClass="button-success" text="Agregar" />
+                                 <VBox spacing="5" alignment="BOTTOM_CENTER">
+                                    <children>
+                                       <Label styleClass="form-label" text=" " />
+                                       <Button mnemonicParsing="false" styleClass="button-success" text="Agregar" />
+                                    </children>
+                                 </VBox>
                               </children>
                            </HBox>
 

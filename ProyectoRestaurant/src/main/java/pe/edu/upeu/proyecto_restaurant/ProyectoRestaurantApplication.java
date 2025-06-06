@@ -32,7 +32,7 @@ public class ProyectoRestaurantApplication extends Application {
 		builder.application().setWebApplicationType(WebApplicationType.NONE);
 		configurableApplicationContext = builder.run(getParameters().getRaw().toArray(new String[0]));
 		
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/admMenu.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/frmPedido.fxml"));
 		fxmlLoader.setControllerFactory(configurableApplicationContext::getBean);
 		parent = fxmlLoader.load();
 	}
@@ -49,7 +49,8 @@ public class ProyectoRestaurantApplication extends Application {
 		
 		stage.setScene(scene);
 		stage.setTitle("Sistema Restaurante");
-		stage.setResizable(false);
+		stage.setResizable(true);
+		stage.setMaximized(true);
 		stage.show();
 	}
 
