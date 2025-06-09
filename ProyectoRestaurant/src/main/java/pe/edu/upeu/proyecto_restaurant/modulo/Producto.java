@@ -40,4 +40,7 @@ public class Producto {
     @ManyToOne
     @JoinColumn(name = "id_seccion", referencedColumnName = "id_seccion")
     private Seccion seccion;
+
+    @Column(name = "imagen", length = 500)
+    private String imagen;
 }

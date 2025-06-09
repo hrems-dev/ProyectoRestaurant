@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:id="bp"
+            xmlns="http://javafx.com/javafx/21.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="pe.edu.upeu.proyecto_restaurant.control.GUIMainFX">
+   <top>
+      <MenuBar fx:id="menuBarFx" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu text="Archivo">
+               <items>
+                  <MenuItem text="Cerrar Sesión" onAction="#cerrarSesion"/>
+                  <SeparatorMenuItem />
+                  <MenuItem text="Salir" onAction="#salir"/>
+               </items>
+            </Menu>
+            <Menu text="Ventanas">
+               <items>
+                  <MenuItem text="Menú" onAction="#abrirMenu"/>
+                  <MenuItem text="Pedidos" onAction="#abrirPedidos"/>
+                  <MenuItem text="Empleados" onAction="#abrirEmpleados"/>
+               </items>
+            </Menu>
+            <Menu text="Ayuda">
+               <items>
+                  <MenuItem text="Acerca de"/>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TabPane fx:id="tabPaneFx" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab fx:id="tabInicio" text="Inicio" closable="false">
+               <content>
+                  <VBox alignment="CENTER" spacing="20">
+                     <Label text="Bienvenido al Sistema de Restaurante" style="-fx-font-size: 24px;"/>
+                     <Label text="Seleccione una opción del menú para comenzar" style="-fx-font-size: 16px;"/>
+                  </VBox>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

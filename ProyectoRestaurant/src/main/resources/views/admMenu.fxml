@@ -1,284 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="root" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <VBox spacing="10" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <!-- Header Section -->
-         <HBox alignment="CENTER_LEFT" spacing="15" styleClass="card">
-            <padding>
-               <Insets bottom="10" left="20" right="20" top="10" />
-            </padding>
-            <children>
-               <Label styleClass="header" text="MENÚ DEL DÍA">
-                  <font>
-                     <Font name="System Bold" size="18.0" />
-                  </font>
-               </Label>
-               <ComboBox prefHeight="30.0" prefWidth="150.0" promptText="Seleccionar sección" />
-               <Button mnemonicParsing="false" styleClass="button" text="Modificar" />
-               <Button mnemonicParsing="false" styleClass="button-danger" text="Cerrar" />
-            </children>
-         </HBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" 
+            prefHeight="800.0" prefWidth="1200.0" 
+            styleClass="root" stylesheets="@../styles/styles.css"
+            xmlns="http://javafx.com/javafx/21.0.1" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="pe.edu.upeu.proyecto_restaurant.control.ControlMenu">
+    <children>
+        <VBox spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" 
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            
+            <!-- Header Section -->
+            <HBox alignment="CENTER_LEFT" spacing="15" styleClass="header-section">
+                <padding>
+                    <Insets bottom="15" left="25" right="25" top="15" />
+                </padding>
+                <Label text="Gestión de Productos" styleClass="header-text">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+            </HBox>
 
-         <!-- Tab Section -->
-         <TabPane prefHeight="450.0" side="LEFT" styleClass="tab-pane" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
-            <tabs>
-               <Tab text="Platos">
-                  <content>
-                     <VBox spacing="15">
-                        <padding>
-                           <Insets bottom="20" left="20" right="20" top="20" />
-                        </padding>
-                        <children>
-                           <!-- Input Form -->
-                           <HBox spacing="10" styleClass="form-group">
-                              <children>
-                                 <VBox spacing="5" HBox.hgrow="ALWAYS">
-                                    <children>
-                                       <Label styleClass="form-label" text="Nombre del plato" />
-                                       <TextField promptText="Ingrese el nombre del plato" />
-                                    </children>
-                                 </VBox>
-                                 <VBox spacing="5">
-                                    <children>
-                                       <Label styleClass="form-label" text="Precio" />
-                                       <TextField prefWidth="120.0" promptText="S/. 0.00" />
-                                    </children>
-                                 </VBox>
-                                 <VBox spacing="5">
-                                    <children>
-                                       <Label styleClass="form-label" text="Stock" />
-                                       <TextField prefWidth="100.0" promptText="Cantidad" />
-                                    </children>
-                                 </VBox>
-                                 <VBox spacing="5" alignment="BOTTOM_CENTER">
-                                    <children>
-                                       <Label styleClass="form-label" text=" " />
-                                       <Button mnemonicParsing="false" styleClass="button-success" text="Agregar" />
-                                    </children>
-                                 </VBox>
-                              </children>
-                           </HBox>
+            <!-- Main Content -->
+            <HBox spacing="20" VBox.vgrow="ALWAYS">
+                <padding>
+                    <Insets left="25" right="25" />
+                </padding>
 
-                           <!-- Table -->
-                           <TableView styleClass="table-view" VBox.vgrow="ALWAYS">
-                              <columns>
-                                 <TableColumn prefWidth="300.0" text="Nombre del Plato" />
-                                 <TableColumn prefWidth="150.0" text="Precio" />
-                                 <TableColumn prefWidth="100.0" text="Stock" />
-                                 <TableColumn prefWidth="100.0" text="Acciones" />
-                              </columns>
-                           </TableView>
+                <!-- Left Panel - Form -->
+                <VBox spacing="20" styleClass="form-panel" HBox.hgrow="ALWAYS" maxWidth="600">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20" />
+                    </padding>
 
-                           <!-- Action Buttons -->
-                           <HBox alignment="CENTER_RIGHT" spacing="10">
-                              <children>
-                                 <Button mnemonicParsing="false" styleClass="button" text="Limpiar" />
-                              </children>
-                           </HBox>
-                        </children>
-                     </VBox>
-                  </content>
-               </Tab>
-               <Tab text="Bebidas">
-                  <content>
-                     <VBox spacing="15">
-                        <padding>
-                           <Insets bottom="20" left="20" right="20" top="20" />
-                        </padding>
-                        <children>
-                           <!-- Input Form -->
-                           <HBox spacing="10" styleClass="form-group">
-                              <children>
-                                 <VBox spacing="5" HBox.hgrow="ALWAYS">
-                                    <children>
-                                       <Label styleClass="form-label" text="Nombre de la bebida" />
-                                       <TextField promptText="Ingrese el nombre de la bebida" />
-                                    </children>
-                                 </VBox>
-                                 <VBox spacing="5">
-                                    <children>
-                                       <Label styleClass="form-label" text="Precio" />
-                                       <TextField prefWidth="120.0" promptText="S/. 0.00" />
-                                    </children>
-                                 </VBox>
-                                 <VBox spacing="5">
-                                    <children>
-                                       <Label styleClass="form-label" text="Stock" />
-                                       <TextField prefWidth="100.0" promptText="Cantidad" />
-                                    </children>
-                                 </VBox>
-                                 <VBox spacing="5" alignment="BOTTOM_CENTER">
-                                    <children>
-                                       <Label styleClass="form-label" text=" " />
-                                       <Button mnemonicParsing="false" styleClass="button-success" text="Agregar" />
-                                    </children>
-                                 </VBox>
-                              </children>
-                           </HBox>
+                    <!-- Hidden ID field -->
+                    <TextField fx:id="txtId" visible="false" />
 
-                           <!-- Table -->
-                           <TableView styleClass="table-view" VBox.vgrow="ALWAYS">
-                              <columns>
-                                 <TableColumn prefWidth="300.0" text="Nombre de la Bebida" />
-                                 <TableColumn prefWidth="150.0" text="Precio" />
-                                 <TableColumn prefWidth="100.0" text="Stock" />
-                                 <TableColumn prefWidth="100.0" text="Acciones" />
-                              </columns>
-                           </TableView>
+                    <!-- Información Básica Section -->
+                    <Label text="Información Básica" styleClass="section-header" />
+                    
+                    <GridPane hgap="15" vgap="15">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
 
-                           <!-- Action Buttons -->
-                           <HBox alignment="CENTER_RIGHT" spacing="10">
-                              <children>
-                                 <Button mnemonicParsing="false" styleClass="button" text="Limpiar" />
-                              </children>
-                           </HBox>
-                        </children>
-                     </VBox>
-                  </content>
-               </Tab>
-               <Tab text="Sopas">
-                  <content>
-                     <VBox spacing="15">
-                        <padding>
-                           <Insets bottom="20" left="20" right="20" top="20" />
-                        </padding>
-                        <children>
-                           <!-- Input Form -->
-                           <HBox spacing="10" styleClass="form-group">
-                              <children>
-                                 <VBox spacing="5" HBox.hgrow="ALWAYS">
-                                    <children>
-                                       <Label styleClass="form-label" text="Nombre de la sopa" />
-                                       <TextField promptText="Ingrese el nombre de la sopa" />
-                                    </children>
-                                 </VBox>
-                                 <VBox spacing="5">
-                                    <children>
-                                       <Label styleClass="form-label" text="Precio" />
-                                       <TextField prefWidth="120.0" promptText="S/. 0.00" />
-                                    </children>
-                                 </VBox>
-                                 <VBox spacing="5">
-                                    <children>
-                                       <Label styleClass="form-label" text="Stock" />
-                                       <TextField prefWidth="100.0" promptText="Cantidad" />
-                                    </children>
-                                 </VBox>
-                                 <VBox spacing="5" alignment="BOTTOM_CENTER">
-                                    <children>
-                                       <Label styleClass="form-label" text=" " />
-                                       <Button mnemonicParsing="false" styleClass="button-success" text="Agregar" />
-                                    </children>
-                                 </VBox>
-                              </children>
-                           </HBox>
+                        <!-- Nombre -->
+                        <VBox spacing="5" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                            <Label text="Nombre del Producto" styleClass="field-label" />
+                            <TextField fx:id="txtNombre" promptText="Ingrese el nombre" styleClass="form-field" />
+                        </VBox>
 
-                           <!-- Table -->
-                           <TableView styleClass="table-view" VBox.vgrow="ALWAYS">
-                              <columns>
-                                 <TableColumn prefWidth="300.0" text="Nombre de la Sopa" />
-                                 <TableColumn prefWidth="150.0" text="Precio" />
-                                 <TableColumn prefWidth="100.0" text="Stock" />
-                                 <TableColumn prefWidth="100.0" text="Acciones" />
-                              </columns>
-                           </TableView>
+                        <!-- Precio -->
+                        <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                            <Label text="Precio" styleClass="field-label" />
+                            <TextField fx:id="txtPrecio" promptText="S/. 0.00" styleClass="form-field" />
+                        </VBox>
 
-                           <!-- Action Buttons -->
-                           <HBox alignment="CENTER_RIGHT" spacing="10">
-                              <children>
-                                 <Button mnemonicParsing="false" styleClass="button" text="Limpiar" />
-                              </children>
-                           </HBox>
-                        </children>
-                     </VBox>
-                  </content>
-               </Tab>
-               <Tab text="Postres">
-                  <content>
-                     <VBox spacing="15">
-                        <padding>
-                           <Insets bottom="20" left="20" right="20" top="20" />
-                        </padding>
-                        <children>
-                           <!-- Input Form -->
-                           <HBox spacing="10" styleClass="form-group">
-                              <children>
-                                 <VBox spacing="5" HBox.hgrow="ALWAYS">
-                                    <children>
-                                       <Label styleClass="form-label" text="Nombre del postre" />
-                                       <TextField promptText="Ingrese el nombre del postre" />
-                                    </children>
-                                 </VBox>
-                                 <VBox spacing="5">
-                                    <children>
-                                       <Label styleClass="form-label" text="Precio" />
-                                       <TextField prefWidth="120.0" promptText="S/. 0.00" />
-                                    </children>
-                                 </VBox>
-                                 <VBox spacing="5">
-                                    <children>
-                                       <Label styleClass="form-label" text="Stock" />
-                                       <TextField prefWidth="100.0" promptText="Cantidad" />
-                                    </children>
-                                 </VBox>
-                                 <VBox spacing="5" alignment="BOTTOM_CENTER">
-                                    <children>
-                                       <Label styleClass="form-label" text=" " />
-                                       <Button mnemonicParsing="false" styleClass="button-success" text="Agregar" />
-                                    </children>
-                                 </VBox>
-                              </children>
-                           </HBox>
+                        <!-- Stock -->
+                        <VBox spacing="5" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                            <Label text="Stock" styleClass="field-label" />
+                            <TextField fx:id="txtStock" promptText="Cantidad disponible" styleClass="form-field" />
+                        </VBox>
 
-                           <!-- Table -->
-                           <TableView styleClass="table-view" VBox.vgrow="ALWAYS">
-                              <columns>
-                                 <TableColumn prefWidth="300.0" text="Nombre del Postre" />
-                                 <TableColumn prefWidth="150.0" text="Precio" />
-                                 <TableColumn prefWidth="100.0" text="Stock" />
-                                 <TableColumn prefWidth="100.0" text="Acciones" />
-                              </columns>
-                           </TableView>
+                        <!-- Estado -->
+                        <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <Label text="Estado" styleClass="field-label" />
+                            <ComboBox fx:id="cboEstado" promptText="Seleccione estado" styleClass="form-field" maxWidth="Infinity" />
+                        </VBox>
+                    </GridPane>
 
-                           <!-- Action Buttons -->
-                           <HBox alignment="CENTER_RIGHT" spacing="10">
-                              <children>
-                                 <Button mnemonicParsing="false" styleClass="button" text="Limpiar" />
-                              </children>
-                           </HBox>
-                        </children>
-                     </VBox>
-                  </content>
-               </Tab>
-            </tabs>
-         </TabPane>
+                    <!-- Categorización Section -->
+                    <Label text="Categorización" styleClass="section-header" />
+                    
+                    <GridPane hgap="15" vgap="15">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
 
-         <!-- Footer Section -->
-         <HBox alignment="CENTER_LEFT" spacing="15" styleClass="card">
-            <padding>
-               <Insets bottom="10" left="20" right="20" top="10" />
-            </padding>
-            <children>
-               <Label styleClass="form-label" text="Nueva sección:" />
-               <TextField prefWidth="200.0" promptText="Nombre de la sección" />
-               <Button mnemonicParsing="false" styleClass="button-success" text="Guardar" />
-            </children>
-         </HBox>
-      </VBox>
-   </children>
+                        <!-- Categoría -->
+                        <VBox spacing="5" GridPane.columnIndex="0">
+                            <HBox spacing="10" alignment="CENTER_LEFT">
+                                <Label text="Categoría" styleClass="field-label" HBox.hgrow="ALWAYS" />
+                                <Button fx:id="btnNuevaCategoria" text="+" styleClass="button-add" 
+                                        onAction="#handleNuevaCategoria" />
+                            </HBox>
+                            <ComboBox fx:id="cboCategoria" promptText="Seleccione categoría" 
+                                    styleClass="form-field" maxWidth="Infinity" />
+                        </VBox>
+
+                        <!-- Sección -->
+                        <VBox spacing="5" GridPane.columnIndex="1">
+                            <HBox spacing="10" alignment="CENTER_LEFT">
+                                <Label text="Sección" styleClass="field-label" HBox.hgrow="ALWAYS" />
+                                <Button fx:id="btnNuevaSeccion" text="+" styleClass="button-add" 
+                                        onAction="#handleNuevaSeccion" />
+                            </HBox>
+                            <ComboBox fx:id="cboSeccion" promptText="Seleccione sección" 
+                                    styleClass="form-field" maxWidth="Infinity" />
+                        </VBox>
+                    </GridPane>
+
+                    <!-- Descripción -->
+                    <VBox spacing="5">
+                        <Label text="Descripción" styleClass="field-label" />
+                        <TextArea fx:id="txtDescripcion" promptText="Ingrese una descripción detallada" 
+                                 wrapText="true" prefRowCount="3" styleClass="form-field" />
+                    </VBox>
+
+                    <!-- Imagen Section -->
+                    <Label text="Imagen del Producto" styleClass="section-header" />
+                    
+                    <VBox spacing="10" styleClass="image-section">
+                        <HBox spacing="10">
+                            <TextField fx:id="txtImagen" promptText="Ruta de la imagen" 
+                                     HBox.hgrow="ALWAYS" styleClass="form-field" />
+                            <Button fx:id="btnSeleccionarImagen" text="Seleccionar" 
+                                    styleClass="button-secondary" onAction="#handleSeleccionarImagen" />
+                        </HBox>
+                        
+                        <!-- Image Preview -->
+                        <ImageView fx:id="imgPreview" fitHeight="150.0" fitWidth="150.0" 
+                                 preserveRatio="true" styleClass="image-preview" />
+                    </VBox>
+
+                    <!-- Action Buttons -->
+                    <HBox spacing="10" alignment="CENTER_RIGHT">
+                        <Button fx:id="btnLimpiar" text="Limpiar" styleClass="button-secondary" 
+                                onAction="#handleLimpiar" />
+                        <Button fx:id="btnGuardar" text="Guardar" styleClass="button-primary" 
+                                defaultButton="true" onAction="#handleGuardar" />
+                    </HBox>
+                </VBox>
+
+                <!-- Right Panel - Table -->
+                <VBox spacing="15" HBox.hgrow="ALWAYS">
+                    <!-- Search and Filter Section -->
+                    <HBox spacing="10" alignment="CENTER_LEFT" styleClass="search-section">
+                        <TextField fx:id="txtBuscar" promptText="Buscar productos..." 
+                                 HBox.hgrow="ALWAYS" styleClass="search-field" />
+                        <ComboBox fx:id="cboFiltroCategoria" promptText="Filtrar por categoría" 
+                                styleClass="filter-field" />
+                        <ComboBox fx:id="cboFiltroSeccion" promptText="Filtrar por sección" 
+                                styleClass="filter-field" />
+                    </HBox>
+
+                    <!-- Table -->
+                    <TableView fx:id="tblProductos" VBox.vgrow="ALWAYS" styleClass="product-table">
+                        <columns>
+                            <TableColumn fx:id="colId" text="ID" prefWidth="60" />
+                            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150" />
+                            <TableColumn fx:id="colPrecio" text="Precio" prefWidth="80" />
+                            <TableColumn fx:id="colStock" text="Stock" prefWidth="70" />
+                            <TableColumn fx:id="colCategoria" text="Categoría" prefWidth="120" />
+                            <TableColumn fx:id="colSeccion" text="Sección" prefWidth="120" />
+                            <TableColumn fx:id="colEstado" text="Estado" prefWidth="100" />
+                            <TableColumn fx:id="colAcciones" text="Acciones" prefWidth="120">
+                                <cellFactory>
+                                    <HBox spacing="5" alignment="CENTER">
+                                        <Button fx:id="btnEditar" text="Editar" 
+                                                styleClass="button-action" onAction="#handleEditar" />
+                                        <Button fx:id="btnEliminar" text="Eliminar" 
+                                                styleClass="button-action-danger" onAction="#handleEliminar" />
+                                    </HBox>
+                                </cellFactory>
+                            </TableColumn>
+                        </columns>
+                    </TableView>
+                </VBox>
+            </HBox>
+        </VBox>
+    </children>
 </AnchorPane>

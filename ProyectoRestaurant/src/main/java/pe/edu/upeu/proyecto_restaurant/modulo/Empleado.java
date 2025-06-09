@@ -16,10 +16,19 @@ public class Empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_empleado")
-    private Long idEmpleado;
+    private Long id;
 
     @Column(name = "nombre", length = 100, nullable = false)
     private String nombre;
+
+    @Column(name = "apellido", length = 100, nullable = false)
+    private String apellido;
+
+    @Column(name = "dni", length = 8, nullable = false, unique = true)
+    private String dni;
+
+    @Column(name = "telefono", length = 9)
+    private String telefono;
 
     @Column(name = "usuario", length = 50, nullable = false, unique = true)
     private String usuario;
@@ -32,4 +41,11 @@ public class Empleado {
 
     @Column(name = "rol", length = 20, nullable = false)
     private String rol;
+
+    @PrePersist
+    public void prePersist() {
+        if (estado == null) {
+            estado = "activo";
+        }
+    }
 } 

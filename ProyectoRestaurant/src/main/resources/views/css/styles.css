@@ -1,0 +1,71 @@
+.root {
+    -fx-font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    -fx-font-size: 14px;
+}
+
+.header {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 15px;
+    -fx-text-fill: white;
+}
+
+.sidebar {
+    -fx-background-color: #34495e;
+    -fx-padding: 10px;
+}
+
+.content-area {
+    -fx-background-color: #ecf0f1;
+    -fx-padding: 20px;
+}
+
+.form-control {
+    -fx-pref-width: 250px;
+    -fx-padding: 8px;
+    -fx-background-radius: 4px;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+}
+
+.button {
+    -fx-cursor: hand;
+}
+
+.button-primary {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+.button-success {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+}
+
+.button-danger {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+}
+
+.alert {
+    -fx-padding: 10px;
+    -fx-background-radius: 4px;
+}
+
+.alert-success {
+    -fx-background-color: #d4edda;
+    -fx-text-fill: #155724;
+}
+
+.alert-danger {
+    -fx-background-color: #f8d7da;
+    -fx-text-fill: #721c24;
+} 

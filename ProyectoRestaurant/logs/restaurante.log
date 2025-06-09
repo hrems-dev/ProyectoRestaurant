@@ -1,0 +1,54 @@
+2025-06-09T07:39:28.449-05:00  INFO 10960 --- [restaurante] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 23.0.2 with PID 10960 (started by USUARIO in C:\Users\USUARIO\Documents\ProyectoRestaurantJava\ProyectoRestaurant)
+2025-06-09T07:39:28.467-05:00  INFO 10960 --- [restaurante] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-06-09T07:39:29.303-05:00  INFO 10960 --- [restaurante] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-09T07:39:29.666-05:00  INFO 10960 --- [restaurante] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 351 ms. Found 10 JPA repository interfaces.
+2025-06-09T07:39:30.240-05:00  INFO 10960 --- [restaurante] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-09T07:39:30.289-05:00  INFO 10960 --- [restaurante] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version [WORKING]
+2025-06-09T07:39:30.318-05:00  INFO 10960 --- [restaurante] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-09T07:39:30.654-05:00  INFO 10960 --- [restaurante] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-09T07:39:30.679-05:00  INFO 10960 --- [restaurante] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-09T07:39:30.798-05:00  INFO 10960 --- [restaurante] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@63bf183e
+2025-06-09T07:39:30.803-05:00  INFO 10960 --- [restaurante] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-09T07:39:32.128-05:00  INFO 10960 --- [restaurante] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-09T07:39:32.172-05:00  INFO 10960 --- [restaurante] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-09T07:39:32.466-05:00  INFO 10960 --- [restaurante] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-09T07:39:33.237-05:00  INFO 10960 --- [restaurante] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 5.42 seconds (process running for 6.915)
+2025-06-09T07:39:56.320-05:00  WARN 10960 --- [restaurante] [JavaFX Application Thread] p.e.u.p.control.ControlLogin             : Error de autenticación: Credenciales inválidas para usuario:  hermes
+2025-06-09T07:40:05.714-05:00  WARN 10960 --- [restaurante] [JavaFX Application Thread] p.e.u.p.control.ControlLogin             : Intento de login con campos vacíos
+2025-06-09T07:40:10.126-05:00  WARN 10960 --- [restaurante] [JavaFX Application Thread] p.e.u.p.control.ControlLogin             : Error de autenticación: Credenciales inválidas para usuario:  hermes
+2025-06-09T07:40:13.422-05:00  INFO 10960 --- [restaurante] [JavaFX Application Thread] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-09T07:40:13.428-05:00  INFO 10960 --- [restaurante] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-09T07:40:13.435-05:00  INFO 10960 --- [restaurante] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-09T10:30:26.693-05:00  INFO 7828 --- [restaurante] [JavaFX-Launcher] o.s.boot.SpringApplication               : Starting application using Java 23.0.2 with PID 7828 (started by USUARIO in C:\Users\USUARIO\Documents\ProyectoRestaurantJava\ProyectoRestaurant)
+2025-06-09T10:30:26.697-05:00  INFO 7828 --- [restaurante] [JavaFX-Launcher] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-06-09T10:30:27.804-05:00  INFO 7828 --- [restaurante] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-09T10:30:27.945-05:00  INFO 7828 --- [restaurante] [JavaFX-Launcher] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 10 JPA repository interfaces.
+2025-06-09T10:30:28.592-05:00  INFO 7828 --- [restaurante] [JavaFX-Launcher] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-09T10:30:28.757-05:00  INFO 7828 --- [restaurante] [JavaFX-Launcher] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-06-09T10:30:28.870-05:00  INFO 7828 --- [restaurante] [JavaFX-Launcher] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-09T10:30:29.223-05:00  INFO 7828 --- [restaurante] [JavaFX-Launcher] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-09T10:30:29.258-05:00  INFO 7828 --- [restaurante] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-09T10:30:29.379-05:00  INFO 7828 --- [restaurante] [JavaFX-Launcher] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@377ba879
+2025-06-09T10:30:29.382-05:00  INFO 7828 --- [restaurante] [JavaFX-Launcher] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-09T10:30:30.956-05:00  INFO 7828 --- [restaurante] [JavaFX-Launcher] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-09T10:30:31.030-05:00  INFO 7828 --- [restaurante] [JavaFX-Launcher] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-09T10:30:31.448-05:00  INFO 7828 --- [restaurante] [JavaFX-Launcher] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-09T10:30:32.066-05:00  INFO 7828 --- [restaurante] [JavaFX-Launcher] o.s.boot.SpringApplication               : Started application in 6.283 seconds (process running for 7.592)
+2025-06-09T10:30:41.089-05:00  INFO 7828 --- [restaurante] [JavaFX Application Thread] p.e.u.p.control.ControlLogin             : Autenticación exitosa para el empleado: hermes con rol: admin
+2025-06-09T10:30:41.163-05:00  INFO 7828 --- [restaurante] [JavaFX Application Thread] p.e.u.p.control.GUIMainFX                : Inicializando GUIMainFX
+2025-06-09T10:30:41.432-05:00 ERROR 7828 --- [restaurante] [JavaFX Application Thread] p.e.u.p.control.GUIMainFX                : Error al cargar la vista /views/admMenu.fxml: 
+/C:/Users/USUARIO/Documents/ProyectoRestaurantJava/ProyectoRestaurant/target/classes/views/admMenu.fxml:174
+
+2025-06-09T10:30:44.662-05:00  INFO 7828 --- [restaurante] [JavaFX Application Thread] p.e.u.p.control.ControlLogin             : Interfaz principal cargada correctamente para el rol: admin
+2025-06-09T10:30:51.232-05:00 ERROR 7828 --- [restaurante] [JavaFX Application Thread] p.e.u.p.control.GUIMainFX                : Error al cargar la vista /views/admMenu.fxml: 
+/C:/Users/USUARIO/Documents/ProyectoRestaurantJava/ProyectoRestaurant/target/classes/views/admMenu.fxml:174
+
+2025-06-09T10:30:58.540-05:00  WARN 7828 --- [restaurante] [JavaFX Application Thread] javafx                                   : Loading FXML document with JavaFX API of version 23.0.1 by JavaFX runtime of version 21.0.1
+2025-06-09T10:30:58.668-05:00  INFO 7828 --- [restaurante] [JavaFX Application Thread] p.e.u.p.control.GUIMainFX                : Vista cargada correctamente: /views/frmPedido.fxml
+2025-06-09T10:31:06.915-05:00  INFO 7828 --- [restaurante] [JavaFX Application Thread] p.e.u.p.control.GUIMainFX                : Vista cargada correctamente: /views/frmEmpleado.fxml
+2025-06-09T10:31:19.877-05:00 ERROR 7828 --- [restaurante] [JavaFX Application Thread] p.e.u.p.control.GUIMainFX                : Error al cargar la vista /views/admMenu.fxml: 
+/C:/Users/USUARIO/Documents/ProyectoRestaurantJava/ProyectoRestaurant/target/classes/views/admMenu.fxml:174
+
+2025-06-09T10:31:40.905-05:00  INFO 7828 --- [restaurante] [JavaFX Application Thread] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-09T10:31:40.913-05:00  INFO 7828 --- [restaurante] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-09T10:31:40.926-05:00  INFO 7828 --- [restaurante] [JavaFX Application Thread] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

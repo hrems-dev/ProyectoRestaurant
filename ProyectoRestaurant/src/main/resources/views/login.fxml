@@ -12,16 +12,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="root" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="root" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.proyecto_restaurant.control.ControlLogin">
    <children>
       <!-- Panel izquierdo con imagen -->
       <AnchorPane prefHeight="600.0" prefWidth="450.0" styleClass="left-panel">
          <children>
-            <ImageView fitHeight="600.0" fitWidth="450.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/restaurant-food.jpg" />
-               </image>
-            </ImageView>
             <VBox alignment="CENTER" prefHeight="600.0" prefWidth="450.0" spacing="20.0" styleClass="image-overlay">
                <children>
                   <Label styleClass="welcome-text" text="Bienvenido a" textFill="WHITE">
@@ -48,7 +43,7 @@
             <!-- Logo del restaurante -->
             <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/restaurant-logo.png" />
+                  <Image url="@../img/secrecy-icon.png" />
                </image>
             </ImageView>
 
@@ -70,7 +65,7 @@
                               <Font name="Roboto" size="14.0" />
                            </font>
                         </Label>
-                        <TextField promptText="Ingrese su usuario" styleClass="login-field" />
+                        <TextField fx:id="txtUsuario" promptText="Ingrese su usuario" styleClass="login-field" />
                      </children>
                   </VBox>
 
@@ -82,12 +77,12 @@
                               <Font name="Roboto" size="14.0" />
                            </font>
                         </Label>
-                        <PasswordField promptText="Ingrese su contraseña" styleClass="login-field" />
+                        <PasswordField fx:id="txtClave" promptText="Ingrese su contraseña" styleClass="login-field" />
                      </children>
                   </VBox>
 
                   <!-- Botón de inicio de sesión -->
-                  <Button defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="login-button" text="Ingresar">
+                  <Button fx:id="btnIngresar" defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#login" styleClass="login-button" text="Ingresar">
                      <font>
                         <Font name="Roboto Medium" size="14.0" />
                      </font>

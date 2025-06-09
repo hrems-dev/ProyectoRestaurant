@@ -1,14 +1,12 @@
 /* Estilos generales */
 .root {
-    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+    -fx-font-family: "Segoe UI", "System";
     -fx-font-size: 14px;
     -fx-background-color: #f5f5f5;
 }
 
 /* Estilos de botones */
 .button {
-    -fx-font-family: 'Roboto Medium', 'Segoe UI Semibold', sans-serif;
-    -fx-font-size: 13px;
     -fx-background-color: #007bff;
     -fx-text-fill: white;
     -fx-padding: 8px 16px;
@@ -36,10 +34,72 @@
     -fx-background-color: #c82333;
 }
 
+/* Estilos específicos del login */
+.login-button {
+    -fx-background-color: #28a745;
+    -fx-font-size: 16px;
+    -fx-padding: 12px 20px;
+}
+
+.login-button:hover {
+    -fx-background-color: #218838;
+}
+
+.login-field {
+    -fx-padding: 12px;
+    -fx-font-size: 14px;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-border-color: #ced4da;
+    -fx-background-color: white;
+}
+
+.login-field:focused {
+    -fx-border-color: #80bdff;
+    -fx-effect: dropshadow(gaussian, rgba(0,123,255,0.25), 0, 0, 0, 0);
+}
+
+.left-panel {
+    -fx-background-color: #343a40;
+}
+
+.image-overlay {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+}
+
+.right-panel {
+    -fx-background-color: white;
+}
+
+.welcome-text {
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+}
+
+.restaurant-name {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.login-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #212529;
+}
+
+.link-label {
+    -fx-cursor: hand;
+    -fx-text-fill: #007bff;
+}
+
+.link-label:hover {
+    -fx-text-fill: #0056b3;
+    -fx-underline: true;
+}
+
 /* Estilos de campos de texto */
 .text-field, .text-area {
-    -fx-font-family: 'Roboto', 'Segoe UI', sans-serif;
-    -fx-font-size: 14px;
     -fx-padding: 8px;
     -fx-border-color: #ced4da;
     -fx-border-radius: 4px;
@@ -49,28 +109,20 @@
 
 .text-field:focused, .text-area:focused {
     -fx-border-color: #80bdff;
-    -fx-effect: dropshadow(gaussian, rgba(0,123,255,0.25), 4, 0, 0, 0);
+    -fx-effect: dropshadow(gaussian, rgba(0,123,255,0.25), 0, 0, 0, 0);
 }
 
 /* Estilos de tablas */
 .table-view {
-    -fx-font-family: 'Roboto', 'Segoe UI', sans-serif;
-    -fx-font-size: 13px;
     -fx-background-color: white;
     -fx-border-color: #dee2e6;
     -fx-border-radius: 4px;
 }
 
 .table-view .column-header {
-    -fx-font-family: 'Roboto Medium', 'Segoe UI Semibold', sans-serif;
-    -fx-font-size: 13px;
     -fx-background-color: #f8f9fa;
     -fx-border-color: #dee2e6;
     -fx-padding: 10px;
-}
-
-.table-view .table-row-cell {
-    -fx-font-family: 'Roboto', 'Segoe UI', sans-serif;
 }
 
 .table-view .table-row-cell:selected {
@@ -107,16 +159,14 @@
 /* Estilos de contenedores */
 .card {
     -fx-background-color: white;
-    -fx-padding: 15px;
-    -fx-background-radius: 4px;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 1);
+    -fx-padding: 20px;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 3);
 }
 
 .header {
-    -fx-font-family: 'Roboto Medium', 'Segoe UI Semibold', sans-serif;
     -fx-font-size: 24px;
     -fx-font-weight: bold;
-    -fx-text-fill: #2c3e50;
     -fx-padding: 20px 0;
 }
 
@@ -127,9 +177,7 @@
 }
 
 .form-label {
-    -fx-font-family: 'Roboto Medium', 'Segoe UI Semibold', sans-serif;
-    -fx-font-size: 13px;
-    -fx-text-fill: #495057;
+    -fx-font-weight: bold;
 }
 
 /* Estilos para alertas y mensajes */
@@ -168,433 +216,4 @@
     -fx-text-fill: #007bff;
     -fx-border-color: #007bff;
     -fx-border-width: 0 0 2 0;
-}
-
-/* TabPane styles */
-.tab-pane {
-    -fx-background-color: transparent;
-}
-
-.tab-pane .tab-header-area {
-    -fx-padding: 5 0 0 0;
-}
-
-.tab-pane .tab-header-background {
-    -fx-background-color: #f8f9fa;
-    -fx-border-color: #dee2e6;
-    -fx-border-width: 0 0 1 0;
-}
-
-.tab-pane .tab {
-    -fx-background-color: transparent;
-    -fx-padding: 10 15 10 15;
-    -fx-background-radius: 0;
-    -fx-border-radius: 0;
-    -fx-cursor: hand;
-}
-
-.tab-pane .tab:selected {
-    -fx-background-color: #007bff;
-}
-
-.tab-pane .tab:hover {
-    -fx-background-color: #e9ecef;
-}
-
-.tab-pane .tab:selected:hover {
-    -fx-background-color: #0056b3;
-}
-
-.tab-pane .tab .tab-label {
-    -fx-font-family: 'Roboto', 'Segoe UI', sans-serif;
-    -fx-font-size: 14px;
-    -fx-text-fill: #495057;
-}
-
-.tab-pane .tab:selected .tab-label {
-    -fx-font-family: 'Roboto Medium', 'Segoe UI Semibold', sans-serif;
-    -fx-font-weight: bold;
-    -fx-text-fill: white;
-}
-
-/* Vertical TabPane specific styles */
-.tab-pane:left .tab-header-area {
-    -fx-padding: 0 -1 0 0;
-}
-
-.tab-pane:left .tab {
-    -fx-padding: 15 20;
-    -fx-border-width: 0 0 1 0;
-    -fx-border-color: #dee2e6;
-}
-
-.tab-pane:left .tab:selected {
-    -fx-border-color: transparent;
-}
-
-.tab-pane:left .tab-label {
-    -fx-alignment: CENTER_LEFT;
-}
-
-/* Content area styles */
-.tab-pane .tab-content-area {
-    -fx-background-color: white;
-    -fx-padding: 10;
-}
-
-/* Custom scroll bar */
-.scroll-bar {
-    -fx-background-color: #f8f9fa;
-    -fx-padding: 0;
-}
-
-.scroll-bar .thumb {
-    -fx-background-color: #adb5bd;
-    -fx-background-radius: 4px;
-}
-
-.scroll-bar .thumb:hover {
-    -fx-background-color: #6c757d;
-}
-
-.scroll-bar .increment-button,
-.scroll-bar .decrement-button {
-    -fx-background-color: transparent;
-    -fx-padding: 2;
-}
-
-.scroll-bar .increment-arrow,
-.scroll-bar .decrement-arrow {
-    -fx-background-color: #6c757d;
-    -fx-shape: " ";
-    -fx-padding: 0;
-}
-
-/* Login styles */
-.left-panel {
-    -fx-background-color: #000000;
-}
-
-.image-overlay {
-    -fx-background-color: rgba(0, 0, 0, 0.5);
-}
-
-.right-panel {
-    -fx-background-color: white;
-}
-
-.login-title {
-    -fx-text-fill: #2c3e50;
-}
-
-.login-field {
-    -fx-background-color: white;
-    -fx-border-color: #e0e0e0;
-    -fx-border-radius: 4px;
-    -fx-padding: 12px;
-    -fx-font-size: 14px;
-}
-
-.login-field:focused {
-    -fx-border-color: #007bff;
-    -fx-effect: dropshadow(gaussian, rgba(0,123,255,0.25), 4, 0, 0, 0);
-}
-
-.login-button {
-    -fx-background-color: #007bff;
-    -fx-text-fill: white;
-    -fx-padding: 12px;
-    -fx-background-radius: 4px;
-    -fx-cursor: hand;
-}
-
-.login-button:hover {
-    -fx-background-color: #0056b3;
-}
-
-.form-label {
-    -fx-text-fill: #495057;
-}
-
-.link-label {
-    -fx-cursor: hand;
-}
-
-.link-label:hover {
-    -fx-underline: true;
-}
-
-.welcome-text {
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 0, 0);
-}
-
-.restaurant-name {
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 0, 0);
-}
-
-/* Order Form Styles */
-.header-section {
-    -fx-background-color: white;
-    -fx-padding: 10px;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 1);
-    -fx-background-radius: 4px;
-}
-
-.header-title {
-    -fx-text-fill: #2c3e50;
-}
-
-.form-field {
-    -fx-background-color: #f8f9fa;
-    -fx-border-color: #dee2e6;
-    -fx-border-radius: 4;
-    -fx-padding: 8;
-    -fx-font-size: 13px;
-}
-
-.form-field:focused {
-    -fx-border-color: #80bdff;
-    -fx-background-color: white;
-    -fx-effect: dropshadow(gaussian, rgba(0,123,255,0.25), 0, 0, 0, 1);
-}
-
-.helper-text {
-    -fx-text-fill: #6c757d;
-    -fx-font-size: 12px;
-    -fx-font-style: italic;
-}
-
-.menu-tabs {
-    -fx-background-color: transparent;
-}
-
-.menu-tabs .tab-header-area {
-    -fx-padding: 0;
-}
-
-.menu-tabs .tab {
-    -fx-background-color: #f8f9fa;
-    -fx-padding: 10px 20px;
-}
-
-.menu-tabs .tab:selected {
-    -fx-background-color: #007bff;
-}
-
-.menu-tabs .tab:selected .tab-label {
-    -fx-text-fill: white;
-}
-
-.menu-table, .order-table {
-    -fx-background-color: white;
-    -fx-border-color: #dee2e6;
-    -fx-border-radius: 4px;
-}
-
-.menu-table .column-header,
-.order-table .column-header {
-    -fx-background-color: #f8f9fa;
-    -fx-border-color: #dee2e6;
-    -fx-padding: 10px;
-}
-
-.table-button {
-    -fx-background-color: #e9ecef;
-    -fx-text-fill: #495057;
-    -fx-background-radius: 4px;
-    -fx-cursor: hand;
-}
-
-.table-button:hover {
-    -fx-background-color: #dee2e6;
-}
-
-.table-button.selected {
-    -fx-background-color: #007bff;
-    -fx-text-fill: white;
-}
-
-.tables-scroll {
-    -fx-background-color: transparent;
-    -fx-padding: 10px;
-}
-
-.tables-scroll .viewport {
-    -fx-background-color: transparent;
-}
-
-.selected-table {
-    -fx-font-size: 14px;
-    -fx-text-fill: #495057;
-}
-
-.total-label {
-    -fx-text-fill: #2c3e50;
-}
-
-.section-title {
-    -fx-text-fill: #2c3e50;
-    -fx-font-size: 16px;
-    -fx-font-weight: bold;
-}
-
-.price-label {
-    -fx-text-fill: #2c3e50;
-    -fx-font-size: 14px;
-}
-
-.table-rect {
-    -fx-stroke: #2c3e50;
-    -fx-stroke-width: 1px;
-    -fx-cursor: hand;
-}
-
-.table-rect:hover {
-    -fx-fill: #8bb5e0;
-}
-
-.separator-line {
-    -fx-stroke: #dee2e6;
-    -fx-stroke-width: 1px;
-}
-
-/* Estilos para paneles */
-.client-info-panel {
-    -fx-background-color: white;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
-    -fx-padding: 20;
-}
-
-/* Estilos para títulos y textos */
-.section-title {
-    -fx-text-fill: #2c3e50;
-    -fx-font-weight: bold;
-}
-
-.helper-text {
-    -fx-text-fill: #6c757d;
-    -fx-font-size: 12px;
-}
-
-/* Estilos para campos de formulario */
-.form-field {
-    -fx-background-color: #f8f9fa;
-    -fx-border-color: #dee2e6;
-    -fx-border-radius: 4;
-    -fx-padding: 8;
-    -fx-font-size: 13px;
-}
-
-.form-field:focused {
-    -fx-border-color: #80bdff;
-    -fx-background-color: white;
-    -fx-effect: dropshadow(gaussian, rgba(0,123,255,0.25), 0, 0, 0, 1);
-}
-
-/* Estilos para botones */
-.button {
-    -fx-background-color: #e9ecef;
-    -fx-text-fill: #212529;
-    -fx-border-radius: 4;
-    -fx-background-radius: 4;
-    -fx-padding: 8 16;
-    -fx-cursor: hand;
-    -fx-font-size: 13px;
-    -fx-font-weight: bold;
-}
-
-.button:hover {
-    -fx-opacity: 0.9;
-}
-
-.button-primary {
-    -fx-background-color: #007bff;
-    -fx-text-fill: white;
-}
-
-.button-secondary {
-    -fx-background-color: #6c757d;
-    -fx-text-fill: white;
-}
-
-.button-success {
-    -fx-background-color: #28a745;
-    -fx-text-fill: white;
-}
-
-.button-danger {
-    -fx-background-color: #dc3545;
-    -fx-text-fill: white;
-}
-
-/* Estilos para checkboxes */
-.category-checkbox {
-    -fx-padding: 5;
-    -fx-font-size: 13px;
-}
-
-.category-checkbox:selected {
-    -fx-text-fill: #007bff;
-}
-
-/* Estilos para tablas */
-.product-table, .order-table {
-    -fx-background-color: white;
-    -fx-border-color: #dee2e6;
-}
-
-.table-view .column-header {
-    -fx-background-color: #f8f9fa;
-    -fx-border-color: #dee2e6;
-    -fx-padding: 8;
-    -fx-font-size: 13px;
-    -fx-font-weight: bold;
-}
-
-/* Estilos para el grid de mesas */
-.tables-grid {
-    -fx-background-color: white;
-    -fx-padding: 10;
-}
-
-.table-cell {
-    -fx-background-color: #e3f2fd;
-    -fx-border-color: #90caf9;
-    -fx-border-radius: 4;
-    -fx-background-radius: 4;
-    -fx-padding: 10;
-}
-
-.table-cell:hover {
-    -fx-background-color: #bbdefb;
-    -fx-cursor: hand;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 2);
-}
-
-.table-number {
-    -fx-text-fill: #1976d2;
-    -fx-font-weight: bold;
-}
-
-.table-price {
-    -fx-text-fill: #2c3e50;
-}
-
-/* Estilos para SplitPane */
-.split-pane {
-    -fx-background-color: transparent;
-    -fx-padding: 0;
-}
-
-.split-pane:horizontal > .split-pane-divider,
-.split-pane:vertical > .split-pane-divider {
-    -fx-background-color: #dee2e6;
-    -fx-padding: 0 1;
-}
-
-/* Estilos para la sección de acciones de mesa */
-.table-actions {
-    -fx-background-color: white;
-    -fx-padding: 15;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, -2);
 }

@@ -2,25 +2,26 @@ package pe.edu.upeu.proyecto_restaurant.modulo;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 @Entity
-@Table(name = "categoria")
+@Table(name = "categorias")
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_categoria")
-    private Long idCategoria;
-
-    @Column(name = "nombre", length = 100, nullable = false)
+    private Long id;
+    
+    @Column(nullable = false)
     private String nombre;
-
-    @Column(name = "estado", length = 20)
-    private String estado;
-}
+    
+    @Column
+    private String descripcion;
+    
+    @Column
+    private String estado = "Activo";
+} 
