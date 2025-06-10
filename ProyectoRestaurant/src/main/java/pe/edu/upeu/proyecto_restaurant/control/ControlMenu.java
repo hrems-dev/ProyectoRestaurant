@@ -104,8 +104,8 @@ public class ControlMenu implements Initializable {
             cargarProductos();
             
             // Configurar manejadores de eventos
-            btnGuardar.setOnAction(e -> handleGuardar());
-            btnLimpiar.setOnAction(e -> handleLimpiar());
+            btnGuardar.setOnAction(e -> guardarProducto());
+            btnLimpiar.setOnAction(e -> limpiarFormulario());
             btnSeleccionarImagen.setOnAction(e -> handleSeleccionarImagen());
 
             // Configurar listener de selección de la tabla
@@ -160,27 +160,48 @@ public class ControlMenu implements Initializable {
             private final HBox box = new HBox(5, btnEditar, btnEliminar);
 
             {
-                btnEditar.getStyleClass().add("button-small");
-                btnEliminar.getStyleClass().add("button-small");
-                btnEliminar.getStyleClass().add("button-danger");
-                
-                box.setStyle("-fx-alignment: CENTER;");
+                btnEditar.getStyleClass().add("button-action");
+                btnEliminar.getStyleClass().add("button-action-danger");
+                box.setAlignment(javafx.geometry.Pos.CENTER);
 
                 btnEditar.setOnAction(event -> {
-                    productoSeleccionado = getTableView().getItems().get(getIndex());
-                    cargarProductoEnFormulario(productoSeleccionado);
+                    Producto producto = getTableView().getItems().get(getIndex());
+                    if (producto != null) {
+                        cargarProductoEnFormulario(producto);
+                    }
                 });
 
                 btnEliminar.setOnAction(event -> {
                     Producto producto = getTableView().getItems().get(getIndex());
-                    eliminarProducto(producto);
+                    if (producto != null) {
+                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                        alert.setTitle("Confirmar eliminación");
+                        alert.setHeaderText(null);
+                        alert.setContentText("¿Está seguro que desea eliminar el producto " + producto.getNombre() + "?");
+
+                        Optional<ButtonType> result = alert.showAndWait();
+                        if (result.isPresent() && result.get() == ButtonType.OK) {
+                            try {
+                                productoService.eliminarProducto(producto.getIdProducto());
+                                cargarProductos();
+                                mostrarMensaje("Éxito", "Producto eliminado correctamente", Alert.AlertType.INFORMATION);
+                            } catch (Exception e) {
+                                logger.error("Error al eliminar producto", e);
+                                mostrarMensaje("Error", "Error al eliminar el producto: " + e.getMessage(), Alert.AlertType.ERROR);
+                            }
+                        }
+                    }
                 });
             }
 
             @Override
             protected void updateItem(Void item, boolean empty) {
                 super.updateItem(item, empty);
-                setGraphic(empty ? null : box);
+                if (empty) {
+                    setGraphic(null);
+                } else {
+                    setGraphic(box);
+                }
             }
         });
     }
@@ -196,6 +217,7 @@ public class ControlMenu implements Initializable {
         }
     }
 
+    @FXML
     private void guardarProducto() {
         if (validarFormulario()) {
             try {
@@ -290,19 +312,7 @@ public class ControlMenu implements Initializable {
         }
     }
 
-    private void eliminarProducto(Producto producto) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Confirmar eliminación");
-        alert.setHeaderText(null);
-        alert.setContentText("¿Está seguro que desea eliminar este producto?");
-
-        if (alert.showAndWait().get() == ButtonType.OK) {
-            productoService.eliminarProducto(producto.getIdProducto());
-            cargarProductos();
-            mostrarMensaje("Éxito", "Producto eliminado correctamente", Alert.AlertType.INFORMATION);
-        }
-    }
-
+    @FXML
     private void limpiarFormulario() {
         productoSeleccionado = null;
         txtId.clear();

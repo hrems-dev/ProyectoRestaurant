@@ -23,7 +23,7 @@ public class Menu {
     private Pedido pedido;
 
     @ManyToOne
-    @JoinColumn(name = "id_producto", referencedColumnName = "id_producto")
+    @JoinColumn(name = "producto_id", referencedColumnName = "producto_id")
     private Producto producto;
 
     @Column(name = "cod_pedido", length = 50)

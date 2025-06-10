@@ -11,24 +11,30 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.Rectangle?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="root" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.proyecto_restaurant.control.ControlLogin">
    <children>
-      <!-- Panel izquierdo con imagen -->
+      <!-- Panel izquierdo con imagen de fondo -->
       <AnchorPane prefHeight="600.0" prefWidth="450.0" styleClass="left-panel">
          <children>
             <VBox alignment="CENTER" prefHeight="600.0" prefWidth="450.0" spacing="20.0" styleClass="image-overlay">
                <children>
-                  <Label styleClass="welcome-text" text="Bienvenido a" textFill="WHITE">
+                  <Label styleClass="welcome-text" text="Bienvenido a">
                      <font>
-                        <Font name="Roboto Light" size="24.0" />
+                        <Font name="Segoe UI Light" size="28.0" />
                      </font>
                   </Label>
-                  <Label styleClass="restaurant-name" text="Restaurant Name" textFill="WHITE">
+                  <Label styleClass="restaurant-name" text="Restaurant Name">
                      <font>
-                        <Font name="Roboto Bold" size="36.0" />
+                        <Font name="Segoe UI Bold" size="42.0" />
                      </font>
                   </Label>
+                  <Label styleClass="welcome-subtitle" text="Sistema de Gestión" textFill="WHITE">
+         <font>
+                        <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
                </children>
             </VBox>
          </children>
@@ -39,30 +45,39 @@
          <padding>
             <Insets left="50.0" right="50.0" />
          </padding>
-         <children>
+        <children>
             <!-- Logo del restaurante -->
-            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/secrecy-icon.png" />
                </image>
             </ImageView>
 
             <!-- Título del formulario -->
-            <Label styleClass="login-title" text="Iniciar Sesión">
-               <font>
-                  <Font name="Roboto Medium" size="28.0" />
-               </font>
-            </Label>
+            <VBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Label styleClass="login-title" text="Iniciar Sesión">
+                     <font>
+                        <Font name="Segoe UI Bold" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="login-subtitle" text="Ingresa tus credenciales para continuar" textFill="#666666">
+                     <font>
+                        <Font name="Segoe UI" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
 
             <!-- Formulario -->
             <VBox spacing="20.0">
                <children>
                   <!-- Campo de usuario -->
-                  <VBox spacing="5.0">
+                  <VBox spacing="8.0">
                      <children>
                         <Label styleClass="form-label" text="Usuario">
                            <font>
-                              <Font name="Roboto" size="14.0" />
+                              <Font name="Segoe UI" size="14.0" />
                            </font>
                         </Label>
                         <TextField fx:id="txtUsuario" promptText="Ingrese su usuario" styleClass="login-field" />
@@ -70,11 +85,11 @@
                   </VBox>
 
                   <!-- Campo de contraseña -->
-                  <VBox spacing="5.0">
+                  <VBox spacing="8.0">
                      <children>
                         <Label styleClass="form-label" text="Contraseña">
                            <font>
-                              <Font name="Roboto" size="14.0" />
+                              <Font name="Segoe UI" size="14.0" />
                            </font>
                         </Label>
                         <PasswordField fx:id="txtClave" promptText="Ingrese su contraseña" styleClass="login-field" />
@@ -84,8 +99,11 @@
                   <!-- Botón de inicio de sesión -->
                   <Button fx:id="btnIngresar" defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#login" styleClass="login-button" text="Ingresar">
                      <font>
-                        <Font name="Roboto Medium" size="14.0" />
+                        <Font name="Segoe UI Bold" size="16.0" />
                      </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
                   </Button>
                </children>
             </VBox>
@@ -95,12 +113,12 @@
                <children>
                   <Label text="¿Olvidaste tu contraseña?" textFill="#666666">
                      <font>
-                        <Font name="Roboto Light" size="12.0" />
+                        <Font name="Segoe UI" size="12.0" />
                      </font>
                   </Label>
-                  <Label styleClass="link-label" text="Contacta a soporte" textFill="#007bff">
+                  <Label styleClass="link-label" text="Contacta a soporte">
                      <font>
-                        <Font name="Roboto Medium" size="12.0" />
+                        <Font name="Segoe UI Semibold" size="12.0" />
                      </font>
                   </Label>
                </children>

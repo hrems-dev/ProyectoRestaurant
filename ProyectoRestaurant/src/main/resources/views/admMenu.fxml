@@ -13,7 +13,7 @@
             xmlns="http://javafx.com/javafx/21.0.1" 
             xmlns:fx="http://javafx.com/fxml/1" 
             fx:controller="pe.edu.upeu.proyecto_restaurant.control.ControlMenu">
-    <children>
+   <children>
         <VBox spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" 
               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             
@@ -136,9 +136,9 @@
                     <!-- Action Buttons -->
                     <HBox spacing="10" alignment="CENTER_RIGHT">
                         <Button fx:id="btnLimpiar" text="Limpiar" styleClass="button-secondary" 
-                                onAction="#handleLimpiar" />
+                                onAction="#limpiarFormulario" />
                         <Button fx:id="btnGuardar" text="Guardar" styleClass="button-primary" 
-                                defaultButton="true" onAction="#handleGuardar" />
+                                defaultButton="true" onAction="#guardarProducto" />
                     </HBox>
                 </VBox>
 
@@ -156,7 +156,7 @@
 
                     <!-- Table -->
                     <TableView fx:id="tblProductos" VBox.vgrow="ALWAYS" styleClass="product-table">
-                        <columns>
+                          <columns>
                             <TableColumn fx:id="colId" text="ID" prefWidth="60" />
                             <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150" />
                             <TableColumn fx:id="colPrecio" text="Precio" prefWidth="80" />
@@ -164,20 +164,11 @@
                             <TableColumn fx:id="colCategoria" text="Categoría" prefWidth="120" />
                             <TableColumn fx:id="colSeccion" text="Sección" prefWidth="120" />
                             <TableColumn fx:id="colEstado" text="Estado" prefWidth="100" />
-                            <TableColumn fx:id="colAcciones" text="Acciones" prefWidth="120">
-                                <cellFactory>
-                                    <HBox spacing="5" alignment="CENTER">
-                                        <Button fx:id="btnEditar" text="Editar" 
-                                                styleClass="button-action" onAction="#handleEditar" />
-                                        <Button fx:id="btnEliminar" text="Eliminar" 
-                                                styleClass="button-action-danger" onAction="#handleEliminar" />
-                                    </HBox>
-                                </cellFactory>
-                            </TableColumn>
-                        </columns>
-                    </TableView>
+                            <TableColumn fx:id="colAcciones" text="Acciones" prefWidth="120" />
+                          </columns>
+                        </TableView>
                 </VBox>
             </HBox>
         </VBox>
-    </children>
+   </children>
 </AnchorPane>

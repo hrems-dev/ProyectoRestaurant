@@ -23,7 +23,7 @@ public class DetPedido {
     private Pedido pedido;
 
     @ManyToOne
-    @JoinColumn(name = "id_producto", referencedColumnName = "id_producto", nullable = false)
+    @JoinColumn(name = "producto_id", referencedColumnName = "producto_id", nullable = false)
     private Producto producto;
 
     @Column(name = "cantidad", nullable = false)

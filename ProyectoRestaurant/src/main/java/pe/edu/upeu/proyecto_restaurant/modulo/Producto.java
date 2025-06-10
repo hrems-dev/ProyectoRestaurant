@@ -15,11 +15,11 @@ import lombok.NoArgsConstructor;
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_producto")
+    @Column(name = "producto_id")
     private Long idProducto;
 
     @ManyToOne
-    @JoinColumn(name = "id_categoria", referencedColumnName = "id_categoria")
+    @JoinColumn(name = "categoria_id", referencedColumnName = "categoria_id")
     private Categoria categoria;
 
     @Column(name = "nombre", length = 100, nullable = false)
@@ -38,7 +38,7 @@ public class Producto {
     private String estado;
 
     @ManyToOne
-    @JoinColumn(name = "id_seccion", referencedColumnName = "id_seccion")
+    @JoinColumn(name = "seccion_id", referencedColumnName = "seccion_id")
     private Seccion seccion;
 
     @Column(name = "imagen", length = 500)

@@ -9,19 +9,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "categorias")
+@Table(name = "categoria")
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_categoria")
+    @Column(name = "categoria_id")
     private Long id;
     
-    @Column(nullable = false)
+    @Column(name = "nombre", nullable = false)
     private String nombre;
     
-    @Column
+    @Column(name = "descripcion")
     private String descripcion;
     
-    @Column
+    @Column(name = "estado")
     private String estado = "Activo";
 } 
